@@ -1,4 +1,9 @@
-//refer to 
+/**!
+ * Google Drive File Picker Example
+ * By Daniel Lo Nigro (http://dan.cx/)
+ */
+
+//refer to
 (function() {
 	/**
 	 * Initialise a Google Driver file picker
