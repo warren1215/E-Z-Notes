@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset = "UTF-8" />
-		<script src="index.js"></script>
+		<script src="jquery-1.8.3.min.js"></script>
+		<script src="sendText.js"></script>
 		<title> StudyEx </title>
+
+		<style>
+      body { width: 300px; }
+      textarea { width: 250px; height: 100px;}
+    </style>
+
 	</head>
 
 	<body>
 		<h1>StudyEx tool<h1>
+		<textarea id="text"></textarea>
 		<button type = "button" id="Choose File">Choose File</button>
 		<script src="googpicker.js"></script>
 		<script>
-				funciton accessDrive()
+				function accessDrive()
 				{
 					var picker = new FilePicker({
 						apikey: '',
@@ -28,7 +35,7 @@
 		</script>
 
 	<script src="https://www.google.com/jsapi?key=PUT_YOUR_API_KEY_HERE"></script>
-	<script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+  <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
 
 </body>
 </html>

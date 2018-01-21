@@ -62,20 +62,3 @@ function pickerCallback(data) {
 		alert('The user selected: ' + currentFileID);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
