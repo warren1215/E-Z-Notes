@@ -113,7 +113,7 @@
     }
 
     $('#newDoc').click(function(){
-      createDoc(formInput.getText());
+      createDoc(document.getElementById('formInput').value);
     });
 
     function createDoc(name) {
