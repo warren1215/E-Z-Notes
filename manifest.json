@@ -7,19 +7,16 @@
 
   "browser_action": {
    "default_icon": "icon.png",
-   "default_popup": "index.html"
+   "default_popup": "GAS.html"
   },
 
   "permissions": [
-    "active tabs",
-    "<all_urls>"
+    "tabs",
+    "<all_urls>",
+    "http://localhost/*",
+    "http://localhost/8000",
+    "notifications",
+    "*://*/*"
   ],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["selection.js"],
-      "run_at": "document_start",
-      "all_frames": true
-    }
-  ]
+  "content_security_policy": "script-src 'self' https://code.jquery.com https://maxcdn.bootstrapcdn.com https://cdnjs.cloudflare.com https://www.google.com https://apis.google.com https://apis.google.com/js/api.js default-src 'self'"
 }

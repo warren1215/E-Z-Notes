@@ -1,0 +1,42 @@
+title2 {
+  font-size: 35px;
+  color: black;
+  margin-left: 25px;
+}
+
+h1 {
+  font-size: 15px;
+  color: black;
+}
+
+.button-wrapper .btn {
+    margin-bottom:5px;
+    margin-top:55px;
+    margin-right:5px;
+    margin-left:60px;
+    /* background-color: grey; */
+    width: 44%;
+}
+
+.button-wrapper1 .btn {
+    margin-bottom:5px;
+    margin-top:10px;
+    margin-right:5px;
+    margin-left:60px;
+    /* background-color: grey; */
+    width: 44%;
+}
+
+
+.button-wrapper2 .btn {
+    margin-bottom:5px;
+    margin-top:105px;
+    margin-right:5px;
+    margin-left:115px;
+    /* background-color: grey; */
+}
+p1 {
+  font-size: 12px;
+  color: black;
+  margin-left: 100px;
+}
