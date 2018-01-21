@@ -6,3 +6,19 @@ chrome.tabs.executeScript( {
   text.value += x;
   // This is where we need to send the string to google docs.
 });
+
+//toolbar button
+chrome.browserAction.onClicked.addListener(function(thing)
+{
+
+
+})
+
+function onClickHandler(info,thing){
+
+  if(info.menuItemID == "Send to Document")
+  {
+
+  }
+
+}

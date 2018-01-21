@@ -1,41 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset = "UTF-8" />
-		<script src="jquery-1.8.3.min.js"></script>
-		<script src="sendText.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<title> StudyEx </title>
-
 		<style>
       body { width: 300px; }
       textarea { width: 250px; height: 100px;}
     </style>
-
 	</head>
 
 	<body>
-		<h1>StudyEx tool<h1>
-		<textarea id="text"></textarea>
-		<button type = "button" id="Choose File">Choose File</button>
-		<script src="googpicker.js"></script>
-		<script>
-				function accessDrive()
-				{
-					var picker = new FilePicker({
-						apikey: '',
-						clientID: '',
-						button1:
-						onClick: function(file)
-						{
-							console.log(file);
-							document.getElementbyId('fileInfo').innerHTML = file.title + '\n' + file.alternateLink;
-						}
-					});
-				}
-		</script>
 
-	<script src="https://www.google.com/jsapi?key=PUT_YOUR_API_KEY_HERE"></script>
-  <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+	<div class="btn-group-vertical">
+  <a href="#" class="btn btn-info" role="button">New</a>
+  <button type="button" class="btn btn-info">Browse</button>
+  </div>
 
-</body>
+	</body>
 </html>
