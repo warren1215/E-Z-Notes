@@ -1,25 +1,70 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<meta charset = "UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<title> StudyEx </title>
+		<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<script src="jquery-1.8.3.min.js"></script>
+		<script src="sendText.js"></script>
+		<div class="container">
+		<title2> EzNotes </title2>
+	</div>
+		<link href="format.css" rel="stylesheet">
 		<style>
-      body { width: 300px; }
-      textarea { width: 250px; height: 100px;}
+      body { background: white !important; width: 200px; height: 300px;}
+      textarea { width: 120px; height: 80px;}
     </style>
+
 	</head>
 
 	<body>
+		<!-- <h1>StudyEx tool<h1> -->
+		<div class="button-wrapper">
+			<input class="btn btn-primary" type="button" value="New Doc">
+		</div>
+		<div class="button-wrapper1">
+			<input class="btn btn-primary pull-right" type="button" value="Browse">
+		</div>
+		<div class="button-wrapper2">
+			<input class="btn btn-primary pull-right" type="button" value="Sign In">
+		</div>
 
-	<div class="btn-group-vertical">
-  <a href="#" class="btn btn-info" role="button">New</a>
-  <button type="button" class="btn btn-info">Browse</button>
-  </div>
 
-	</body>
+	<!-- <ul class="nav nav-tabs">
+		<li class="active"><a href="#">Home</a>
+			<div class="button-wrapper">
+				<input class="btn btn-primary" type="button" value="New Doc">
+			</div>
+			<div class="button-wrapper1">
+				<input class="btn btn-primary pull-right" type="button" value="Browse">
+			</div>
+			<div class="button-wrapper2">
+				<input class="btn btn-primary pull-right" type="button" value="Sign In">
+			</div>
+		</li>
+  	<li><a href="#">Menu 1</a>
+			<div class="button-wrapper">
+				<input class="btn btn-primary" type="button" value="teehee">
+			</div>
+			<div class="button-wrapper1">
+				<input class="btn btn-primary pull-right" type="button" value="xd">
+			</div>
+			<div class="button-wrapper2">
+				<input class="btn btn-primary pull-right" type="button" value="Sign In">
+			</div>
+		</li>
+	</ul> -->
+
+	<script src="googpicker.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://www.google.com/jsapi?key=PUT_YOUR_API_KEY_HERE"></script>
+  <script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+
+</body>
 </html>
