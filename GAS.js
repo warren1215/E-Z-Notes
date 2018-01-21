@@ -56,24 +56,6 @@
       });
     });
 
-
-
-    // chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
-    //   if (request.method == "getSelection")
-    //     sendResponse({data: window.getSelection().toString()});
-    //   else
-    //     sendResponse({});
-    // });
-    //
-    //
-    // chrome.tabs.executeScript({
-    //   code: "window.getSelection().toString();"
-    // }, function(selection) {
-    //   var x = selection[0];
-    //   inputLine = document.getElementById('text');
-    //   // This is where we need to send the string to google docs.
-    // });
-
     /**
      *  Initializes the API client library and sets up sign-in state
      *  listeners.
@@ -129,6 +111,10 @@
         return;
       });
     }
+
+    $('#newDoc').click(function(){
+      createDoc(formInput.getText());
+    });
 
     function createDoc(name) {
       gapi.client.script.scripts.run({
