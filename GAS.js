@@ -1,6 +1,6 @@
    // Client ID and API key from the Developer Console
-    var CLIENT_ID = '1008943154281-960bgik09dn9eg9n9hii1ddtg5ij2ofb.apps.googleusercontent.com';
-    var API_KEY = 'AIzaSyBbdVIJ6dhrRg6-8XsCygeei0lHJOzw79s';
+    var clientId = '<INSERT_CLIENT_ID>';
+    var API_KEY = '<INSERT_API_KEY>';
 
     // Array of API discovery doc URLs for APIs used by the quickstart
     var DISCOVERY_DOCS = ["https://script.googleapis.com/$discovery/rest?version=v1"];
@@ -17,14 +17,11 @@
 
     var documentId;
 
-    var developerKey = 'AIzaSyCDJlHNYfTaYSzfLo11rUZdhPAowZ5l69U';
-
-    // The Client ID obtained from the Google API Console. Replace with your own Client ID.
-    var clientId = "1008943154281-960bgik09dn9eg9n9hii1ddtg5ij2ofb.apps.googleusercontent.com";
+    var developerKey = '<INSERT_DEVELOPER_KEY>';
 
     // Replace with your own project number from console.developers.google.com.
     // See "Project number" under "IAM & Admin" > "Settings"
-    var appId = "1008943154281";
+    var appId = "INSERT_APP_ID";
 
     // Scope to use to access user's Drive items.
     var scope = ['https://www.googleapis.com/auth/drive'];
@@ -63,7 +60,7 @@
     function initClient() {
       gapi.client.init({
         apiKey: API_KEY,
-        clientId: CLIENT_ID,
+        clientId: clientId,
         discoveryDocs: DISCOVERY_DOCS,
         scope: SCOPES
       }).then(function () {
