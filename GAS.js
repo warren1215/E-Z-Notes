@@ -1,7 +1,3 @@
-   // Client ID and API key from the Developer Console
-    var clientId = '<INSERT_CLIENT_ID>';
-    var API_KEY = '<INSERT_API_KEY>';
-
     // Array of API discovery doc URLs for APIs used by the quickstart
     var DISCOVERY_DOCS = ["https://script.googleapis.com/$discovery/rest?version=v1"];
 
@@ -10,18 +6,10 @@
 
     var authorizeButton = document.getElementById('authorize-button');
     //var signoutButton = document.getElementById('signout-button');
-    var scriptId =
-      '1NLhUTcbWlqWH1rD5Dlq8ffXLFDOf9uRrSET2wIZmDKmWTYoPXK29hc1I';
 
     var inputLine;
 
     var documentId;
-
-    var developerKey = '<INSERT_DEVELOPER_KEY>';
-
-    // Replace with your own project number from console.developers.google.com.
-    // See "Project number" under "IAM & Admin" > "Settings"
-    var appId = "INSERT_APP_ID";
 
     // Scope to use to access user's Drive items.
     var scope = ['https://www.googleapis.com/auth/drive'];
@@ -84,7 +72,7 @@
         // signoutButton.style.display = 'block';
 
         //TEST FUNCTION
-        callScriptFunction();
+        // callScriptFunction();
       } else {
         authorizeButton.style.display = 'block';
         //signoutButton.style.display = 'none';
