@@ -1,4 +1,4 @@
-// Client ID and API key from the Developer Console
+// Client ID and API key from the Developer Console #### CHANGE FILENAME TO 'config.js' #####
 var API_KEY = 'YOUR_API_KEY';
 var scriptId =
   'YOUR_SCRIPT_ID';
