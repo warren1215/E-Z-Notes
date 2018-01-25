@@ -2,13 +2,12 @@
     var DISCOVERY_DOCS = ["https://script.googleapis.com/$discovery/rest?version=v1"];
 
     // If you ever doubt your scopes, just get all of them -badprogrammingtips
-    var SCOPES = 'https://apps-apis.google.com/a/feeds https://apps-apis.google.com/a/feeds/alias/ https://apps-apis.google.com/a/feeds/groups/ https://mail.google.com/ https://sites.google.com/feeds https://www.google.com/calendar/feeds https://www.google.com/m8/feeds https://www.googleapis.com/auth/admin.directory.group https://www.googleapis.com/auth/admin.directory.user https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/documents.currentonly https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/dynamiccreatives https://www.googleapis.com/auth/forms https://www.googleapis.com/auth/forms.currentonly https://www.googleapis.com/auth/groups https://www.googleapis.com/auth/script.cpanel https://www.googleapis.com/auth/script.external_request https://www.googleapis.com/auth/script.scriptapp https://www.googleapis.com/auth/script.send_mail https://www.googleapis.com/auth/script.storage https://www.googleapis.com/auth/script.webapp.deploy https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/spreadsheets.currentonly https://www.googleapis.com/auth/sqlservice https://www.googleapis.com/auth/userinfo.email';
+    var SCOPES = 'https://www.googleapis.com/auth/documents';
 
     var authorizeButton = document.getElementById('authorize-button');
     //var signoutButton = document.getElementById('signout-button');
 
     var inputLine;
-
     var documentId;
 
     // Scope to use to access user's Drive items.
@@ -16,28 +15,27 @@
 
     var pickerApiLoaded = false;
     var oauthToken;
-
     var fileId;
 
     /**
      *  On load, called to load the auth2 library and API client library.
      */
-    function handleClientLoad() {
+    function handleClientLoad(){
       gapi.load('client:auth2', initClient);
     }
 
-    $(document).ready(function() {
-      $(document).keypress(function(e) {
-      if(e.which == 13) {
-          if (window.getSelection) {
-          inputLine = "\u2022 " + window.getSelection().toString();
-
-          appendToDoc(fileId, inputLine);
-          } else if (document.selection && document.selection.type != "Control") {
-          inputLine = "\u2022 " +  document.selection.createRange().text;
-          appendToDoc(fileId, inputLine);
+    $(document).ready(function(){
+      $(document).keypress(function(e){
+        if(e.which == 49 && e.ctrlKey){
+            if (window.getSelection){
+              inputLine = "\u2022 " + window.getSelection().toString();
+              appendToDoc(fileId, inputLine);
+            }
+            else if (document.selection && document.selection.type != "Control"){
+              inputLine = "\u2022 " +  document.selection.createRange().text;
+              appendToDoc(fileId, inputLine);
+            }
         }
-      }
       });
     });
 
@@ -45,13 +43,15 @@
      *  Initializes the API client library and sets up sign-in state
      *  listeners.
      */
-    function initClient() {
+    function initClient()
+    {
       gapi.client.init({
         apiKey: API_KEY,
         clientId: clientId,
         discoveryDocs: DISCOVERY_DOCS,
         scope: SCOPES
-      }).then(function () {
+      }).then(function ()
+      {
         // Listen for sign-in state changes.
         gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
@@ -72,7 +72,7 @@
         // signoutButton.style.display = 'block';
 
         //TEST FUNCTION
-        // callScriptFunction();
+        //callScriptFunction();
       } else {
         authorizeButton.style.display = 'block';
         //signoutButton.style.display = 'none';
@@ -82,6 +82,8 @@
     //Appends onto a new line in the file given the id of the document and
     //String wanted
     function appendToDoc(id, text) {
+      //console.log(id);
+      //console.log(text);
       gapi.client.script.scripts.run({
         'scriptId': scriptId,
         'resource': {
@@ -114,12 +116,6 @@
       }).then(function(resp) {
         return;
       });
-    }
-
-    // Example DOC ID 1Y9vt43piRGpcmPAgxfMTnPygx2QKWotoyTHCAMBhFfc
-    function callScriptFunction() {
-      appendToDoc('1Y9vt43piRGpcmPAgxfMTnPygx2QKWotoyTHCAMBhFfc', inputLine);
-      createDoc("TestFILES");
     }
 
     /**
@@ -192,7 +188,7 @@
     function pickerCallback(data) {
       if (data.action == google.picker.Action.PICKED) {
         fileId = data.docs[0].id;
-        alert('The user selected: ' + fileId);
+        //alert('The user selected: ' + fileId);
         console.log(fileId);
       }
     }
