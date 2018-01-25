@@ -26,7 +26,7 @@
 
     $(document).ready(function(){
       $(document).keypress(function(e){
-        if(e.which == 99){ //&& e.ctrlKey){
+        if(e.which == 99 && e.ctrlKey){
             if (window.getSelection){
               inputLine = "\u2022 " + window.getSelection().toString();
               appendToDoc(fileId, inputLine);
