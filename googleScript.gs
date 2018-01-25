@@ -22,7 +22,8 @@ function openDoc(id) {
 }
 
 //Appends text
-function appendText(text) {
+function appendText(id, text) {
+    openDoc(id);
     doc.getBody().appendParagraph(text);
 }
 
